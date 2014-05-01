@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amazon web service </title>
+  <p>
+    <img src="../logo.jpg" width="100" height="100" alt="Try Prime" />
+    </p>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+  </head>
+  <body>
+  <h1><%= title %></h1>
+    <h1>Register to buy what you want!!</h1>
+    <div class="container">
+        <h2>Enter details:</h2> 
+     <form class="form-horizontal" action = "/cache" method = "post">
+            <div class="form-group">
+            	<label for="fname">First Name:</label>
+	    	    <input id="fname" class="form-control" onblur="validat(this.value);" type='text' name='fname' placeholder="Input your First name"/>
+			</div>
+			  <div class="form-group">
+            	<label for="lname">Last Name:</label>
+	    	    <input id="lname" class="form-control"  onblur="validat(this.value);" type='text' name='lname' placeholder="Input your Last name"/>
+			</div>
+			
+	<div class="form-group">
+	   		<label for="email">Email ID: </label>
+	    		<input id='email' onblur="validat(this.value);" class="form-control" type="text" name='email' placeholder="Your authentic Email ID"/>
+	     	</div>
+	  
+	       	
+	    	<div class="form-group">
+	    		<label for="password">Password </label>
+	    		<input id='password' class="form-control" onblur="validat(this.value);" type="password" name='password' placeholder="Your password"/>
+	    	</div>
+	    	
+	    	<div class="form-group">
+	    		<label for="confirmpassword"> Confirm Password </label>
+	    		<input id='confirmpassword' class="form-control" onblur="validat(this.value);" type="password" name='confirmpassword' placeholder="Type your password again"/>
+	    	</div>
+	    	  <script type="text/javascript">
+	    	
+ 	function validat(val) {
+ 	if (val == '')
+ 	{
+ 		alert("Enter the value" +val);
+  				return false;
+ 	}
+ 		if(val.length < 3)
+ 	{
+ 		alert(" Enter valid value");
+ 	}
+ 	}
+		</script>
+	    	<tr><td><input type="submit" name ="Register" value="Register"> </td></tr>
+	    </form>
+	    
+	</div>
+    <script type="text/javascript" src="/js/cache.js"></script>
+  </body>
+</html>

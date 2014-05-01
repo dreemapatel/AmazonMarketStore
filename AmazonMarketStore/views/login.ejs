@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/css/bootstrap.min.css' />
+    <link href="/stylesheets/css/signin.css" rel="stylesheet">
+  </head>
+  <body>
+  
+  
+  <div class="container">
+   
+      <form action="/login" class="form-signin" role="form" method="post">
+      <% if(typeof err!== 'undefined') { %>
+    <h4><font color="red"> <%= err %> </font></h4>
+    <% } %>
+      <h3 class="form-signin-heading">Welcome to Amazon Store</h3>
+        <h4 class="form-signin-heading">Please sign in</h4>
+       
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        
+        <a href="signup">Not a member? Register Now</a>
+      </form>
+
+    </div> <!-- /container -->
+  
+ 
+    </body>
+    </html>
+    

@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Signup</title>
+    
+    <link rel='stylesheet' href='/stylesheets/css/bootstrap.min.css' />
+  </head>
+  <body>
+  
+  <% if (typeof err!== "undefined") { %>
+     <% err.forEach(function (err){ %>
+     <h5> <font color="red"><%= err.msg %> </font></h5>
+     <% } )%>
+     <% } %>
+     
+     <% if (typeof error!== "undefined") { %>
+     
+     <h5> <font color="red"><%= error%> </font></h5>
+    
+     <% } %>
+   
+  
+  <div class="container" style="margin: 10px;">
+      <div class="row"><h2>New Registration</h2>
+  </div>
+ 
+  <form role="form" action="/signup" method="post">
+    <div class="form-group">
+      <label for="firstname" class="col-md-2">
+        First Name:
+      </label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" name="firstname" placeholder="Enter First Name">
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="lastname" class="col-md-2">
+        Last Name:
+      </label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name">
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="emailaddress" class="col-md-2">
+        Email address:
+      </label>
+      <div class="col-md-10">
+        <input type="email" class="form-control" name="email" placeholder="Enter email address">
+        <p class="help-block">
+          Example: yourname@domain.com
+        </p>
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="password" class="col-md-2">
+        Password:
+      </label>
+      <div class="col-md-10">
+        <input type="password" class="form-control" name="password" placeholder="Enter Password">
+        <p class="help-block">
+          Min: 6 characters (Alphanumeric only)
+        </p>
+      </div>
+ 
+ 
+    </div>
+    
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-10">
+        <button type="submit" class="btn btn-info">
+          Register
+        </button>
+      </div>
+    </div>
+  </form>
+  </div>
+ 
+  
+ 
+ <script src='/stylesheets/js/bootstrap.min.js'></script>
+  </body>
+</html>
+ 
+  
+  
+ 
